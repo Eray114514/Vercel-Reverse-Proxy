@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    {"source": "/(.*)", "destination": "https://cx.eraymao.uk/$1"}
+    {"source": "/(.*)", "destination": "https://rule34video.com/$1"}
   ]
 }
