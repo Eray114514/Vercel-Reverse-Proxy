@@ -1,33 +1,8 @@
 {
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "${env:PROXY_TARGET}"
-        }
-      ],
-      "destination": "https://${env:PROXY_TARGET}/$1"
-    }
+    {"source": "/(.*)", "destination": "https://cosxplay.com/$1"}
   ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Content-Security-Policy",
-          "value": "upgrade-insecure-requests"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "no-referrer"
-        }
-      ]
-    }
+  "redirects": [
+    {"source": "https://cosxplay.com/:path*", "destination": "https://cosx.eraymao.uk/:path*", "permanent": false}
   ]
 }
