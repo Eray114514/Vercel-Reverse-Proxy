@@ -2,18 +2,15 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "https://:PROXY_TARGET/$1",
       "has": [
         {
           "type": "host",
-          "value": ":PROXY_TARGET"
+          "value": "${env:PROXY_TARGET}"
         }
-      ]
+      ],
+      "destination": "https://${env:PROXY_TARGET}/$1"
     }
   ],
-  "env": {
-    "PROXY_TARGET": "@proxy-target"
-  },
   "headers": [
     {
       "source": "/(.*)",
