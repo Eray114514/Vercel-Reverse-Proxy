@@ -3,6 +3,6 @@
     {"source": "/(.*)", "destination": "https://cosxplay.com/$1"}
   ],
   "redirects": [
-    {"source": "https://cosxplay.com/:path*", "destination": "https://cosx.eraymao.uk/:path*", "permanent": false}
+    {"source": "/:path*", "destination": "https://cosx.eraymao.uk/:path*", "permanent": false}
   ]
 }
